@@ -25,12 +25,19 @@ Short description:
 
 ## Current Branch Validation
 
+### Near-1M MRCR Retrieval
+
 | Check | Result |
 |---|---:|
 | Qwen 3.6 current-branch MRCR revalidation | 25/25 |
 | Mistral Small 3.1 near-1M MRCR | 20/20 |
-| Gemma 3 near-1M MRCR | 20/20 |
+| Gemma 4 26B near-1M MRCR | 20/20 |
 | Opus-distilled 35B A3B near-1M MRCR | 20/20 |
+
+### Codebase And Product Hardening
+
+| Check | Result |
+|---|---:|
 | Qwen 3.6 codebase QA with CANAL | 5/5 |
 | Qwen 2.5 Coder codebase QA with CANAL | 5/5 |
 | No-CANAL codebase control | 0/5, prompt too long |
@@ -55,4 +62,3 @@ QA task where CANAL passed. That is the key comparison:
 Raw result artifacts are retained in the private development environment. The
 binary preview includes a proof script so a qualified tester can reproduce a
 small proof without receiving private source code.
-

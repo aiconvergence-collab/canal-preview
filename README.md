@@ -23,12 +23,19 @@ older important context.
 
 ## Current Proof Snapshot
 
+### Near-1M MRCR Retrieval
+
 | Check | Result |
 |---|---:|
 | Qwen 3.6 27B near-1M MRCR | 100/100 |
 | Mistral Small 3.1 near-1M MRCR | 20/20 |
-| Gemma 3 near-1M MRCR | 20/20 |
+| Gemma 4 26B near-1M MRCR | 20/20 |
 | Opus-distilled 35B A3B near-1M MRCR | 20/20 |
+
+### Other Hardening Checks
+
+| Check | Result |
+|---|---:|
 | Qwen 3.6 codebase QA with CANAL | 5/5 |
 | Qwen 2.5 Coder codebase QA with CANAL | 5/5 |
 | No-CANAL codebase control | 0/5, prompt too long |
@@ -101,4 +108,3 @@ See [docs/faq.md](docs/faq.md).
 
 This public repo intentionally does not include CANAL source code. Source access
 is not part of the public preview.
-
