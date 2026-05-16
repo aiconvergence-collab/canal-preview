@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CANAL - Long-Context Local Inference</title>
+    <meta name="description" content="CANAL extends local llama.cpp context with KV overflow, retrieval, and RAM/SSD-backed storage.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="mark">C</span>
+        <span>CANAL</span>
+      </div>
+      <nav>
+        <a href="#proof">Proof</a>
+        <a href="#limits">Limits</a>
+        <a href="#preview">Preview</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Private llama.cpp branch</p>
+          <h1>Long-Context Local Inference</h1>
+          <p class="lede">
+            CANAL moves old KV cache data out of GPU memory, stores it in RAM or
+            SSD, and retrieves useful older context when the model needs it.
+          </p>
+          <p class="claim">KV overflow + retrieval + RAM/SSD-backed KV storage + RAM compression.</p>
+          <div class="actions">
+            <a class="button primary" href="#preview">Request Private Preview</a>
+            <a class="button secondary" href="docs/proof-results.md">View Proof Results</a>
+          </div>
+        </div>
+
+        <div class="dashboard" aria-label="CANAL proof dashboard mockup">
+          <div class="panel wide">
+            <div class="panel-title">Context Overview</div>
+            <div class="big-number">1,010,000</div>
+            <div class="muted">tested context cap</div>
+            <div class="meter"><span style="width: 82%"></span></div>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Qwen 3.6</div>
+            <div class="score">100/100</div>
+            <div class="muted">near-1M MRCR</div>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Codebase QA</div>
+            <div class="score">5/5</div>
+            <div class="muted">CANAL pass</div>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Control</div>
+            <div class="score dim">0/5</div>
+            <div class="muted">prompt too long</div>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Package</div>
+            <div class="score">PASS</div>
+            <div class="muted">binary proof</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proof" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Current proof snapshot</p>
+          <h2>Evidence Before Hype</h2>
+        </div>
+        <div class="proof-grid">
+          <article><span>Qwen 3.6 near-1M MRCR</span><strong>100/100</strong></article>
+          <article><span>Mistral Small near-1M MRCR</span><strong>20/20</strong></article>
+          <article><span>Gemma near-1M MRCR</span><strong>20/20</strong></article>
+          <article><span>Opus-MoE near-1M MRCR</span><strong>20/20</strong></article>
+          <article><span>Qwen 3.6 codebase QA</span><strong>5/5</strong></article>
+          <article><span>No-CANAL control</span><strong>0/5</strong></article>
+          <article><span>Real-document QA</span><strong>PASS</strong></article>
+          <article><span>Binary package proof</span><strong>PASS</strong></article>
+        </div>
+      </section>
+
+      <section id="limits" class="section two-col">
+        <div>
+          <p class="eyebrow">Precise claims</p>
+          <h2>What CANAL Is Not</h2>
+        </div>
+        <ul class="limits">
+          <li>Not unlimited context.</li>
+          <li>Not perfect recall.</li>
+          <li>Not a replacement for model quality.</li>
+          <li>Not a public production release today.</li>
+        </ul>
+      </section>
+
+      <section id="preview" class="section preview">
+        <div>
+          <p class="eyebrow">Controlled access</p>
+          <h2>Private Binary Preview</h2>
+          <p>
+            The first preview is binary-only. Testers can run CANAL without
+            receiving the private C++ source code.
+          </p>
+        </div>
+        <div class="request-box">
+          <p>Good-fit testers should have Linux, an NVIDIA GPU, local GGUF models, and a real long-context workflow.</p>
+          <a class="button primary" href="docs/private-beta.md">Preview Details</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>CANAL preview repo. Source code is private.</span>
+      <a href="docs/faq.md">FAQ</a>
+    </footer>
+  </body>
+</html>
+
